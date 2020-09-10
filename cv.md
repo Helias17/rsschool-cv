@@ -2,15 +2,15 @@
 
 ## Ilya Komar
 
- Contacts:
+## Contacts:
 - Phone: +375296664475
 - E-mail: helias@yandex.ru
 - Skype: helias17
 
 ## My short-term goals
-Improve JS level, learn react, find office job, because freelance has a lot of disadvantageы.
+Improve JS level, learn react, find office job, because freelance has a lot of disadvantages.
 
-Skills
+## Skills
 html, css/sass,  js, jquery, gulp, git, bem, mobile-first, wordpress
 
 ## Code example:
