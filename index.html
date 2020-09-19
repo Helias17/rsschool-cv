@@ -70,6 +70,43 @@
         <li class="text__list-item"><a href="https://github.com/Helias17/livesklad" target="_blank" class="text__link">LiveSklad - CRM for small biz</a></li>
       </ul>
     </div>
+    <div  class="page-section">
+      <h2 class="title title_h2">Code example</h2>
+      <code class="text text_code">
+'use strict'
+
+// Floating button for autoscroll to top of the page
+// Button visible only after page scroll
+
+{
+  let scrollBtn = document.getElementsByClassName('scroll-btn')[0];
+  let isVisible = false;
+  let height = 2500;
+
+  scrollBtn.addEventListener('click', ()=>{
+    $('html, body').animate({ scrollTop: 0 }, '900');
+  })
+
+  document.addEventListener('scroll', ()=>{
+
+    if ( window.scrollY > height && isVisible == false ) {
+      scrollBtn.classList.remove('hidden');
+      setTimeout(()=>{
+        scrollBtn.classList.add('scroll-btn_visible');
+      }, 100)
+      isVisible = true;
+    } else if ( window.scrollY &lt; height && isVisible == true ) {
+      scrollBtn.classList.remove('scroll-btn_visible');
+      setTimeout(()=>{
+        scrollBtn.classList.add('hidden');
+      }, 100)
+      isVisible = false;
+    }
+
+  })
+}
+      </code>
+    </div>
     <div class="page-section">
       <h2 class="title title_h2">Education</h2>
       <ul class="text">
