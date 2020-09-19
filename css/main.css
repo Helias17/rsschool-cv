@@ -1,0 +1,325 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: https://meyerweb.com
+	HTML5 Doctor				:: https://html5doctor.com
+	and the HTML5 Boilerplate	:: https://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+html, body, body div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, abbr, address, cite, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, figure, footer, header, nav, section, details, summary {
+  display: block; }
+
+/* Handle box-sizing while better addressing child elements:
+   https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {
+  max-width: 100%; }
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll; }
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help; }
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th {
+  font-weight: bold;
+  vertical-align: bottom; }
+
+td {
+  font-weight: normal;
+  vertical-align: top; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */ }
+
+input[type="radio"] {
+  vertical-align: text-bottom; }
+
+input[type="checkbox"] {
+  vertical-align: bottom; }
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline; }
+
+.ie6 input {
+  vertical-align: text-bottom; }
+
+select, input, textarea {
+  font: 99% sans-serif; }
+
+select:focus, input:focus, textarea:focus, button:focus {
+  outline: 0; }
+
+table {
+  font-size: inherit;
+  font: 100%; }
+
+small {
+  font-size: 85%; }
+
+strong {
+  font-weight: bold; }
+
+td, td img {
+  vertical-align: top; }
+
+/* Make sure sup and sub don't mess with your line-heights https://gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* standardize any monospaced elements */
+kbd, samp {
+  font-family: Arial, Verdana, sans-serif; }
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0; }
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible; }
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic; }
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+body, html {
+  background-color: #100e17;
+  color: white;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.5; }
+  @media (min-width: 1600px) {
+    body, html {
+      font-size: 20px; } }
+
+.wrapper {
+  max-width: 900px;
+  padding: 5vw;
+  margin: 0 auto; }
+
+.page-section {
+  margin-bottom: 3rem; }
+
+.contacts__image {
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 20px solid rgba(0, 0, 0, 0.9); }
+
+.contacts__image-item {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  border: 20px solid rgba(0, 0, 0, 0.4); }
+
+.contacts__greeting {
+  display: inline-block;
+  background-color: #0bceaf;
+  border-radius: 30px 30px 30px 0;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 10px; }
+
+.contacts__desc {
+  font-size: 1.5rem;
+  margin-bottom: 1rem; }
+
+.contacts__icon {
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 0.3rem;
+  fill: #fff;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+
+.contacts__link {
+  color: #fff;
+  text-decoration: none; }
+  .contacts__link:hover .contacts__icon {
+    fill: #0bceaf; }
+
+.title_h1 {
+  font-size: 2.5rem;
+  font-weight: 700; }
+
+.title_h2 {
+  font-size: 1.5rem;
+  font-weight: 700; }
+  .title_h2:before {
+    content: '';
+    display: inline-block;
+    height: 1.1rem;
+    width: 5px;
+    background-color: #0bceaf;
+    margin-right: 10px; }
+
+.skills {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .skills__item {
+    border: 1px solid #666;
+    border-radius: 0.5rem;
+    padding: 0 0.5rem;
+    margin: 0 0.5rem 0.5rem 0; }
+
+.text_marg-bot-1 {
+  margin-bottom: 1rem; }
+
+.text_code {
+  display: block;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 200;
+  font-size: 0.8rem;
+  white-space: pre;
+  max-width: 100%;
+  background-color: #211F27;
+  padding: 0 0.5rem;
+  overflow-x: auto; }
+  @media (min-width: 1000px) {
+    .text_code {
+      font-size: 1rem; } }
+
+.text__list-item {
+  list-style: square inside; }
+
+.text__link {
+  color: #fff;
+  text-decoration: underline;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+  .text__link:hover {
+    color: #0bceaf; }
